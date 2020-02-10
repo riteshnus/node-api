@@ -4,7 +4,7 @@ var morgan = require('morgan');
 var eventsRouter = require('./routers/events-router');
 
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
 app.use(express.static('client'));
@@ -21,8 +21,9 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.use('/events', eventsRouter);
+// app.use('/', require('./index.html'))
+app.use('/', eventsRouter);
 
 app.listen(port);
-console.log("Running app on  port. Visit: http://localhost:" + port + "/");
+console.log("Running app on port. Visit: http://localhost:" + port + "/");
 
