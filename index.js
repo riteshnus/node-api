@@ -24,5 +24,5 @@ app.use(bodyParser.json());
 app.use('/events', eventsRouter);
 
 app.listen(port);
-console.log("Running app on port port. Visit: http://localhost:" + port + "/");
+console.log("Running app on  port. Visit: http://localhost:" + port + "/");
 
