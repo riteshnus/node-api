@@ -25,6 +25,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pm2": "^4.2.3"
+    "pm2": "^5.2.0"
   }
 }
